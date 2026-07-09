@@ -75,6 +75,16 @@ QA ha reportado que el siguiente payload enviado al endpoint `POST /books` provo
 
 **Instrucción:** Explique la causa del problema.
 
+**Explicación:** Tiene que ver con el primer problema, debido a que el **Enum** no es un **String**, lo único que hay que hacer es cambiar el Payload, concretamente en la línea de genre hay que mandar algo como esto: 
+
+```json
+{
+  "...": "...",
+  "genre": "CLASSIC",
+  "...": "..."
+}
+```
+
 ---
 
 ### 6. Devolución de libros no prestados (20%)

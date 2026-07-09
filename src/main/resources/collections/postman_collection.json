@@ -26,7 +26,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"Clean Code\",\n  \"author\": \"Robert C. Martin\",\n  \"genre\": \"novel\",\n  \"isbn\": \"978-0132350884\",\n  \"available\": true,\n  \"availableCount\": 5\n}",
+              "raw": "{\n  \"title\": \"Clean Code\",\n  \"author\": \"Robert C. Martin\",\n  \"genre\": \"CLASSIC\",\n  \"isbn\": \"978-0132350884\",\n  \"available\": true,\n  \"availableCount\": 5\n}",
               "options": { "raw": { "language": "json" } }
             }
           }
