@@ -1,4 +1,4 @@
-# [Nombre] [Carné]
+# Brandon José Ascencio Alemán 00077921
 
 ## Indicaciones
 
@@ -25,6 +25,8 @@ Actualmente:
 - Filtrar por **autor y género al mismo tiempo** provoca que el servidor falle.
 
 **Instrucción:** Explique la causa del problema y resuélvalo.
+
+**Explicación:** Se estaban llamando a mandar el dato de Genre como una **String**, no como un **Enum** como está definido, además por esto mismo al definirlo como un **Enum**, el toUpperCase() no era algo válido.
 
 ---
 

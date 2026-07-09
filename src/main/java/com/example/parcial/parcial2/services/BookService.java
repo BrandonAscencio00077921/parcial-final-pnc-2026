@@ -26,7 +26,7 @@ public class BookService {
         Book book = new Book();
         book.setTitle(dto.getTitle());
         book.setAuthor(dto.getAuthor());
-        book.setGenre(Genre.valueOf(dto.getGenre()));
+        book.setGenre(dto.getGenre());
         book.setIsbn(dto.getIsbn());
         book.setAvailable(dto.isAvailable());
         book.setAvailableCount(dto.getAvailableCount());
@@ -39,13 +39,13 @@ public class BookService {
                 .orElseThrow(() -> new RuntimeException("Book not found"));
     }
 
-    public List<Book> getAllBooks(String author, String genre) {
+    public List<Book> getAllBooks(String author, Genre genre) {
         if (author != null && genre != null) {
-            return bookRepository.findByAuthorAndGenre(genre, author);
+            return bookRepository.findByAuthorAndGenre(author, genre);
         } else if (author != null) {
             return bookRepository.findByAuthor(author);
         } else if (genre != null) {
-            return bookRepository.findByGenre(Genre.valueOf(genre));
+            return bookRepository.findByGenre(Genre.valueOf(String.valueOf(genre)));
         }
         return bookRepository.findAll();
     }
@@ -55,9 +55,6 @@ public class BookService {
                 .orElseThrow(() -> new RuntimeException("Book not found"));
         book.setTitle(dto.getTitle());
         book.setAuthor(dto.getAuthor());
-        if (dto.getGenre() != null) {
-            book.setGenre(Genre.valueOf(dto.getGenre().toUpperCase()));
-        }
         book.setIsbn(dto.getIsbn());
         book.setAvailable(dto.isAvailable());
         book.setAvailableCount(dto.getAvailableCount());

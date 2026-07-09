@@ -7,5 +7,5 @@ public enum Genre {
     NOVEL,
     SCIENCE,
     ECONOMICS,
-    POLITICS
+    POLITICS;
 }

@@ -53,7 +53,7 @@
               "path": ["books"],
               "query": [
                 { "key": "author", "value": "Robert C. Martin" },
-                { "key": "genre", "value": "novel" }
+                { "key": "genre", "value": "NOVEL" }
               ]
             },
             "header": []
