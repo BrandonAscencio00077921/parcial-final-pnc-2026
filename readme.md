@@ -56,6 +56,11 @@ GET /books?id=ed16ed1e-7017-4697-a08a-d28c09a74acf
 
 **Instrucción:** Explique la causa del problema.
 
+**Explicación:** El problema surge debido a que el endpoint está siendo llamado de manera incorrecta, el dato del **ID** en realidad está definido como PathVariable, un endpoint correcto sería algo como esto:
+```http
+GET /books/ed16ed1e-7017-4697-a08a-d28c09a74acf
+```
+
 ---
 
 ### 5. Error al crear un libro (10%)
